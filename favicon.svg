@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Light theme background -->
+  <defs>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        .favicon-bg { fill: #0a0e27; }
+        .favicon-border { stroke: #00ff00; }
+        .favicon-check { stroke: #00ff00; }
+      }
+      @media (prefers-color-scheme: light) {
+        .favicon-bg { fill: #ffffff; }
+        .favicon-border { stroke: #000000; }
+        .favicon-check { stroke: #000000; }
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="favicon-bg" width="64" height="64" rx="8"/>
+  
+  <!-- Checkbox outline (8-bit style) -->
+  <rect class="favicon-border" x="12" y="12" width="40" height="40" fill="none" stroke-width="3" rx="2"/>
+  
+  <!-- Checkmark (8-bit style) -->
+  <polyline class="favicon-check" points="18,32 26,40 46,20" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
