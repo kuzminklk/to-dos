@@ -34,6 +34,11 @@ html.dark-theme {
   --theme-shadow: rgba(0, 255, 0, 0.2);
 }
 
+/* Dark Theme: White button text for visibility */
+html.dark-theme button {
+  color: #ffffff !important;
+}
+
 /* ==========================================
    RESET & GLOBAL STYLES
    ========================================== */
@@ -109,10 +114,28 @@ header h1 {
 }
 
 #themeToggle {
-  font-size: 0.8rem;
+  background-color: var(--theme-secondary);
+  color: var(--theme-border);
+  border: 2px solid var(--theme-border);
+  box-shadow: 3px 3px 0 var(--theme-border);
   padding: 0.5rem 1rem;
   min-width: 0;
   min-height: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: all 0.1s ease;
+}
+
+#themeToggle:hover,
+#themeToggle:focus {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--theme-border);
+  outline: none;
+}
+
+#themeToggle:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--theme-border);
 }
 
 /* ==========================================
