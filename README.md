@@ -65,8 +65,8 @@ This project features a **retro 8-bit arcade aesthetic** inspired by classic gam
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/8bit-todo-list.git
-cd 8bit-todo-list
+git clone https://github.com/kuzminklk/to-dos.git
+cd to-dos
 ```
 
 2. **Install dependencies:**
