@@ -11,11 +11,10 @@
  * Interface for Task properties
  */
 export interface TaskInterface {
-	id: number
-	title: string
-	done: boolean
+  id: number
+  title: string
+  done: boolean
 }
-
 
 /* ==========================================
    TASK CLASS
@@ -27,15 +26,15 @@ export interface TaskInterface {
  * @implements {TaskInterface}
  */
 export class Task implements TaskInterface {
-	/**
-	 * Create a new Task instance
-	 * @param id - Unique identifier for the task
-	 * @param title - Task description text
-	 * @param done - Completion status (default: false)
-	 */
-	constructor(
-		public id: number,
-		public title: string,
-		public done: boolean = false
-	) { }
+  /**
+   * Create a new Task instance
+   * @param id - Unique identifier for the task
+   * @param title - Task description text
+   * @param done - Completion status (default: false)
+   */
+  constructor(
+    public id: number,
+    public title: string,
+    public done: boolean = false,
+  ) {}
 }

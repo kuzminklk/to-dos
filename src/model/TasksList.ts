@@ -5,7 +5,6 @@
 
 import { Task } from "./Task.ts"
 
-
 /* ==========================================
    INTERFACE & TYPE DEFINITIONS
    ========================================== */
@@ -14,14 +13,13 @@ import { Task } from "./Task.ts"
  * Interface for TasksList properties and methods
  */
 export interface TasksListInterface {
-	tasks: Task[]
-	load(): void
-	save(): void
-	clear(): void
-	addTask(item: Task): void
-	removeTask(id: Task["id"]): void
+  tasks: Task[]
+  load(): void
+  save(): void
+  clear(): void
+  addTask(item: Task): void
+  removeTask(id: Task["id"]): void
 }
-
 
 /* ==========================================
    TASKS LIST CLASS
@@ -33,52 +31,52 @@ export interface TasksListInterface {
  * @implements {TasksListInterface}
  */
 export class TasksList implements TasksListInterface {
-	public tasks: Task[] = []
+  public tasks: Task[] = []
 
-	/**
-	 * Load tasks from browser local storage
-	 * Parses stored JSON and restores task list state
-	 */
-	load(): void {
-		const storedTasks: string | null = localStorage.getItem("Tasks")
+  /**
+   * Load tasks from browser local storage
+   * Parses stored JSON and restores task list state
+   */
+  load(): void {
+    const storedTasks: string | null = localStorage.getItem("Tasks")
 
-		if (typeof storedTasks !== "string") return
+    if (typeof storedTasks !== "string") return
 
-		const parsedTasks: Task[] = JSON.parse(storedTasks)
-		this.tasks = parsedTasks
-	}
+    const parsedTasks: Task[] = JSON.parse(storedTasks)
+    this.tasks = parsedTasks
+  }
 
-	/**
-	 * Persist current tasks to browser local storage
-	 * Converts task array to JSON and stores it
-	 */
-	save(): void {
-		localStorage.setItem("Tasks", JSON.stringify(this.tasks))
-	}
+  /**
+   * Persist current tasks to browser local storage
+   * Converts task array to JSON and stores it
+   */
+  save(): void {
+    localStorage.setItem("Tasks", JSON.stringify(this.tasks))
+  }
 
-	/**
-	 * Remove all tasks and save empty list
-	 */
-	clear(): void {
-		this.tasks = []
-		this.save()
-	}
+  /**
+   * Remove all tasks and save empty list
+   */
+  clear(): void {
+    this.tasks = []
+    this.save()
+  }
 
-	/**
-	 * Add a new task to the list and persist
-	 * @param task - Task object to add
-	 */
-	addTask(task: Task): void {
-		this.tasks.push(task)
-		this.save()
-	}
+  /**
+   * Add a new task to the list and persist
+   * @param task - Task object to add
+   */
+  addTask(task: Task): void {
+    this.tasks.push(task)
+    this.save()
+  }
 
-	/**
-	 * Remove a task by its ID and persist
-	 * @param id - Task ID to remove
-	 */
-	removeTask(id: Task["id"]): void {
-		this.tasks = this.tasks.filter(task => task.id !== id)
-		this.save()
-	}
+  /**
+   * Remove a task by its ID and persist
+   * @param id - Task ID to remove
+   */
+  removeTask(id: Task["id"]): void {
+    this.tasks = this.tasks.filter((task) => task.id !== id)
+    this.save()
+  }
 }

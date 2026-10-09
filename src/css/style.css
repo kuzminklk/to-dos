@@ -3,7 +3,7 @@
    Classic pixel-art inspired design
    ========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 /* ==========================================
    THEME VARIABLES
@@ -55,7 +55,7 @@ button {
 }
 
 html {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 10px;
   scroll-behavior: smooth;
 }
@@ -67,7 +67,9 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* ==========================================
@@ -86,7 +88,7 @@ main {
 
 section {
   border: 3px solid var(--theme-border);
-  box-shadow: 
+  box-shadow:
     3px 3px 0 var(--theme-shadow),
     6px 6px 0 var(--theme-shadow);
   padding: 1.5rem;
@@ -108,7 +110,7 @@ header {
 
 header h1 {
   font-size: 2rem;
-  text-shadow: 
+  text-shadow:
     2px 2px 0 var(--theme-border),
     4px 4px 0 var(--theme-primary);
 }
@@ -168,7 +170,7 @@ header h1 {
 
 .newTask input:focus {
   outline: none;
-  box-shadow: 
+  box-shadow:
     2px 2px 0 var(--theme-border),
     4px 4px 0 var(--theme-primary);
   border-color: var(--theme-primary);
